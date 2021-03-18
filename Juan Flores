@@ -1,0 +1,34 @@
+int cant_piñ, cant_sand, cant_ban;
+            double precio_sand, precio_ban, precio_piñ, desc_piñ, desc_san, costo_total, piña_tot, sand_tot, ban_tot;
+
+            Console.WriteLine("Ingrese la cantidad de piñas que desea ordenar: ");
+            cant_piñ = int.Parse(Console.ReadLine());
+            Console.WriteLine("Ingrese el precio de cada piña: ");
+            precio_piñ = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Ingrese la cantidad de sandias que desea ordenar: ");
+            cant_sand = int.Parse(Console.ReadLine());
+            Console.WriteLine("Ingrese el precio de cada sandia: ");
+            precio_sand = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Ingrese la cantidad de bananos que desea ordenar: ");
+            cant_ban = int.Parse(Console.ReadLine());
+            Console.WriteLine("Ingrese el precio de cada banano: ");
+            precio_ban = double.Parse(Console.ReadLine());
+
+            desc_piñ = (cant_piñ * precio_piñ * 0.10);
+            piña_tot = cant_piñ * precio_piñ - desc_piñ;
+
+            desc_san = (cant_sand * precio_sand * 0.05);
+            sand_tot = cant_sand * precio_sand - desc_san;
+
+            ban_tot = cant_ban * precio_ban;
+
+            costo_total = sand_tot + piña_tot + ban_tot;
+
+
+            Console.WriteLine("El precio total de la piña es: $"+piña_tot);
+            Console.WriteLine("El precio total de la sandia  es: $" + sand_tot);
+            Console.WriteLine("El precio total de los bananos es: $" + ban_tot);
+            Console.WriteLine("El costo total es: $" + costo_total);
+            Console.ReadKey();
